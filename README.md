@@ -1,8 +1,21 @@
 # SQL Server com AdventureWorks no Docker
 
-Um setup Docker pronto para usar com **SQL Server 2022** (Developer Edition) e banco de dados **AdventureWorks2022**.
+Um setup Docker pronto para usar com **SQL Server 2022** e banco de dados **AdventureWorks2022**.
 
-> Este container foi criado para o uso em desenvolvimento, testes e para fins de estudos.
+## O que este setup faz
+
+O projeto cria um ambiente de desenvolvimento com SQL Server 2022 (Developer Edition) e restaura o banco de dados `AdventureWorks2022` usando Docker.
+
+A automação irá fazer:
+
+1.  Construir uma imagem Docker a partir da imagem oficial `mcr.microsoft.com/mssql/server:2022-latest`.
+2.  Iniciar o SQL Server dentro do container.
+3.  Baixar e restaurar o banco de dados `AdventureWorks2022` na primeira vez que for executado.
+4.  Persistir os dados do banco em um volume Docker, garantindo que nenhuma informação seja perdida ao reiniciar o container.
+
+O resultado é um ambiente SQL Server pronto para uso, sem a necessidade de instalação ou configuração manual.
+
+> Este projeto foi criado para o uso em desenvolvimento, testes e para fins de estudos.
 
 ## Pré-requisitos
 
